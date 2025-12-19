@@ -1,0 +1,569 @@
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <title>My Entertainment Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+
+
+	<style>
+       
+        html {
+            scroll-behavior: smooth;         }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            background-image: url('pin8.jpg'); 
+            background-size: cover; 
+            background-repeat: no-repeat; 
+            background-attachment: fixed; 
+            background-position: center;
+            
+        }
+
+       
+        .marquee-wrapper {
+            width: 100%;
+            background: linear-gradient(to right, #fce4ec, #ffffff, #fce4ec);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            padding: 15px 0;
+            overflow: hidden;
+            white-space: nowrap;
+            position: relative;
+        }
+
+        .marquee-content {
+            display: inline-block;
+            animation: scroll 20s linear infinite;
+        }
+
+        .marquee-content span {
+            font-size: 1.1rem;
+            font-weight: 800;
+            color: #d81b60;
+            text-transform: uppercase;
+            padding: 0 30px;
+            letter-spacing: 2px;
+        }
+
+        .outline-text {
+            color: transparent;
+            -webkit-text-stroke: 1px #d81b60;
+            opacity: 0.5;
+        }
+
+        @keyframes scroll {
+            from { transform: translateX(0); }
+            to { transform: translateX(-50%); }
+        }
+
+        
+        .navigation-bar {
+            display: flex;
+            justify-content: center; 
+            align-items: center;    
+	    position: sticky;
+	    top: 20px;
+	    z-index:1000;
+            margin: 60px auto 30px auto; 
+            width: fit-content;      
+            background-color: #c1666b; 
+            padding: 15px 40px;
+            border-radius: 50px;     
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            gap: 15px;
+        }
+
+        .nav-button {
+            text-decoration: none;
+            color: #FEE5F0;
+            font-weight: bold;
+            padding: 10px 18px;
+            text-transform: uppercase;
+            font-size: 13px;
+            transition: 0.3s;
+            border-radius: 25px;
+        }
+
+        .nav-button:hover {
+            background: #d81b60;
+            color: white;
+        }
+
+        .back-link {
+            text-decoration: none;
+            color: #FEE5F0;
+            font-size: 18px;
+            margin-right: 10px;
+        }
+
+       
+        .section-header {
+            display: flex;
+            justify-content: center;
+            margin: 60px 0 30px 0;
+            scroll-margin-top: 100px; 
+        }
+
+        .title-box {
+            background-color:  #FFE3E9  ;
+            padding: 15px 60px;
+            border-radius: 50px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            color:  #E5195E  ;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 1.2rem;
+            border: 3px solid #F83B72  ;
+        }
+
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px 80px 20px;
+        }
+
+        .grid-layout {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            aspect-ratio: 1 / 1;
+            border-radius: 30px;
+            overflow: hidden;
+            background: linear-gradient(45deg, #ffe8a3, #ffb4e6);
+
+position: relative;
+            transition: transform 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+.fav-song-section {
+    padding: 50px 20px;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;    
+    gap: 25px;              
+}
+
+
+.song-card-container {
+    background: white;
+    padding: 20px 30px;
+    border-radius: 25px;
+    display: flex;         
+    align-items: center;
+    gap: 30px;
+    box-shadow: 0 10px 30px rgba(138, 17, 68, 0.1);
+    border: 2px solid #FFD1DC;
+    max-width: 600px;      
+    height: 180px;
+    width: 100%;
+    transition: 0.3s ease;
+}
+
+.song-card-container:hover {
+    transform: translateX(10px); 
+    border-color: #8A1144;
+}
+
+
+.flip-card {
+    background-color: transparent;
+    width: 140px; 
+    height: 140px;
+    perspective: 1500px;
+    cursor: pointer;
+    flex-shrink: 0; 
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1); 
+    transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.flip-card-front img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.flip-card-back {
+    background: linear-gradient(135deg, #8A1144, #4e0625);
+    color: white;
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    font-size: 14px;
+}
+
+
+.song-details {
+    flex-grow: 1; 
+}
+
+.song-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px; 
+    color: #8A1144;
+    margin: 0;
+}
+
+.artist-name {
+    color: #666;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+
+.play-btn-fav {
+    background: #8A1144;
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 50px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+}
+
+.play-btn-fav:hover {
+    background: #a31652;
+    transform: scale(1.05);
+}
+.footer {
+    font-family: Arial, sans-serif;
+    color:#450C21;
+    margin-top:30px;
+    margin-bottom:30px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    padding: 10px;
+    background-color:#F7CAC9; 
+    border-top: 5px solid var(--pink-accent);
+    width:98%;
+}
+
+
+.audio-center {
+    display: flex; 
+    justify-content: center; 
+    width: 100%; 
+    margin-top: 0px; 
+    margin-bottom: 0px; 
+}
+
+    </style>
+
+
+
+<body>
+
+    <div class="marquee-wrapper">
+        <div class="marquee-content">
+            <span>WELCOME TO MY INTEREST PAGE &#127872</span>
+            <span class="outline-text">WELCOME TO MY INTERESTS PAGE</span>
+            <span>WELCOME TO MY INTEREST PAGE &#127872</span>
+            <span class="outline-text">WELCOME TO MY INTERESTS PAGE</span>
+        </div>
+    </div>
+
+    <nav class="navigation-bar"> 
+        <a href="entertainment.html" class="back-link"><i class="fas fa-arrow-left"></i> </a>
+        <a href="#novel-section" class="nav-button">novel collection</a>
+        <a href="#sports-section" class="nav-button">sports</a>
+        <a href="#movie-section" class="nav-button">fav show/ movie</a>
+        <a href="#song-section" class="nav-button">fav song</a>
+    </nav>
+
+    <div class="container">
+        <div class="section-header" id="novel-section">
+            <div class="title-box">My Novel Collection</div>
+        </div>
+        <div class="grid-layout">
+            <div class="card"><img src="n1.jpg"></div>
+            <div class="card"><img src="n2.jpg"></div>
+            <div class="card"><img src="n3.jpg"></div>
+            <div class="card"><img src="n4.jpg"></div>
+	    <div class="card"><img src="n5.jpg"></div>
+            <div class="card"><img src="n6.jpg"></div>
+	    <div class="card"><img src="n7.jpg"></div>
+            <div class="card"><img src="n8.jpg"></div>
+        </div>
+
+
+        
+    <div class="container">
+        <div class="section-header" id="sports-section">
+            <div class="title-box">My Favourite Sports</div>
+        </div>
+        <div class="grid-layout">
+            <div class="card"><img src="f11.jpg"></div>
+            <div class="card"><img src="f12.jpg"></div>
+            <div class="card"><img src="f13.jpg"></div>
+            <div class="card"><img src="f14.jpg"></div>
+	    <div class="card"><img src="b1.jpg"></div>
+            <div class="card"><img src="b2.jpg"></div>
+	    <div class="card"><img src="b3.jpg"></div>
+            <div class="card"><img src="b4.jpg"></div>
+        </div>
+
+
+
+	  <div class="container">
+        <div class="section-header" id="movie-section">
+            <div class="title-box">My Favourite Show/Movie</div>
+        </div>
+        <div class="grid-layout">
+            <div class="card"><img src="movie1.jpg"></div>
+            <div class="card"><img src="movie2.jpg"></div>
+            <div class="card"><img src="movie3.jpg"></div>
+            <div class="card"><img src="movie4.jpg"></div>
+	    <div class="card"><img src="movie5.jpg"></div>
+            <div class="card"><img src="movie6.jpg"></div>
+	    <div class="card"><img src="movie7.jpg"></div>
+            <div class="card"><img src="movie8.jpg"></div>
+        </div>
+
+	
+<div class="container">
+    <div class="section-header" id="song-section">
+        <div class="title-box">My Favourite Song</div>
+    </div>
+
+    <section class="fav-song-section">
+        <div class="song-card-container">
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="judika.jpg">
+                    </div>
+                    <div class="flip-card-back">
+                        <h3>Judika</h3>
+                        <p>Click to Play</p>
+                    </div>
+                </div>
+            </div>
+            <div class="song-details">
+                <h2 class="song-title">Aku Yang Tersakiti</h2>
+                <p class="artist-name">Judika</p>
+                <div class="audio-wrapper">
+                    <audio id="song1"><source src="judika.mp3" type="audio/mp4"></audio>
+                    <button onclick="playSong('song1', this)" class="play-btn-fav">
+                        <i class="fas fa-play"></i> PLAY SONG
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="song-card-container">
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="bruno.jpeg">
+                    </div>
+                    <div class="flip-card-back">
+                        <h3>Bruno Mars</h3>
+                        <p>Click to Play</p>
+                    </div>
+                </div>
+            </div>
+            <div class="song-details">
+                <h2 class="song-title">It Will Rain</h2>
+                <p class="artist-name">Bruno Mars</p>
+                <div class="audio-wrapper">
+                    <audio id="song2"><source src="bruno.mp3" type="audio/mp4"></audio>
+                    <button onclick="playSong('song2', this)" class="play-btn-fav">
+                        <i class="fas fa-play"></i> PLAY SONG
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="song-card-container">
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="taylor.jpg">
+                    </div>
+                    <div class="flip-card-back">
+                        <h3>Taylor Swift</h3>
+                        <p>Click to Play</p>
+                    </div>
+                </div>
+            </div>
+            <div class="song-details">
+                <h2 class="song-title">All Too Well (10 Minute Version)</h2>
+                <p class="artist-name">Taylor Swift</p>
+                <div class="audio-wrapper">
+                    <audio id="song3"><source src="taylor.mp3" type="audio/mp4"></audio>
+                    <button onclick="playSong('song3', this)" class="play-btn-fav">
+                        <i class="fas fa-play"></i> PLAY SONG
+                    </button>
+                </div>
+            </div>
+        </div>
+
+	
+	<div class="song-card-container">
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="cortis.jpeg">
+                    </div>
+                    <div class="flip-card-back">
+                        <h3>Cortis</h3>
+                        <p>Click to Play</p>
+                    </div>
+                </div>
+            </div>
+            <div class="song-details">
+                <h2 class="song-title">What You Want</h2>
+                <p class="artist-name">Cortis</p>
+                <div class="audio-wrapper">
+                    <audio id="song4"><source src="cortis.mp3" type="audio/mp4"></audio>
+                    <button onclick="playSong('song4', this)" class="play-btn-fav">
+                        <i class="fas fa-play"></i> PLAY SONG
+                    </button>
+                </div>
+            </div>
+        </div>
+
+	<div class="song-card-container">
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="lee.jpeg">
+                    </div>
+                    <div class="flip-card-back">
+                        <h3>LeeHeeSang<h3>
+                        <p>Click to Play</p>
+                    </div>
+                </div>
+            </div>
+            <div class="song-details">
+                <h2 class="song-title">Wonderwall</h2>
+                <p class="artist-name">LeeHeeSang</p>
+                <div class="audio-wrapper">
+                    <audio id="song5"><source src="wonderwall.m4a" type="audio/mp4"></audio>
+                    <button onclick="playSong('song5', this)" class="play-btn-fav">
+                        <i class="fas fa-play"></i> PLAY SONG
+                    </button>
+                </div>
+            </div>
+        </div>
+
+	<div class="song-card-container">
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="justin.jpeg">
+                    </div>
+                    <div class="flip-card-back">
+                        <h3>Justin Bieber<h3>
+                        <p>Click to Play</p>
+                    </div>
+                </div>
+            </div>
+            <div class="song-details">
+                <h2 class="song-title">Love Yourself</h2>
+                <p class="artist-name">Justin Bieber</p>
+                <div class="audio-wrapper">
+                    <audio id="song6"><source src="justin.mp3" type="audio/mp4"></audio>
+                    <button onclick="playSong('song6', this)" class="play-btn-fav">
+                        <i class="fas fa-play"></i> PLAY SONG
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<div class="audio-center">
+    <audio controls style="width:290px; height: 60px;" autoplay loop>
+        <source src="lee.mp3" type= "audio/mpeg">
+    </audio>
+</div>
+
+<div class="footer">
+  &copy; 2025 Liya Hadiera Binti Syaful Azam. All rights reserved.
+</div>
+
+
+<script>
+function playSong(id, btn) {
+    var audio = document.getElementById(id);
+    
+    
+    var allAudios = document.getElementsByTagName('audio');
+    for(var i = 0; i < allAudios.length; i++){
+        if(allAudios[i] != audio) {
+            allAudios[i].pause();
+           
+            var allButtons = document.getElementsByClassName('play-btn-fav');
+            for(var j=0; j<allButtons.length; j++) {
+                if(allButtons[j] != btn) allButtons[j].innerHTML = '<i class="fas fa-play"></i> PLAY SONG';
+            }
+        }
+    }
+
+    if (audio.paused) {
+        audio.play();
+        btn.innerHTML = '<i class="fas fa-pause"></i> PAUSE';
+    } else {
+        audio.pause();
+        btn.innerHTML = '<i class="fas fa-play"></i> PLAY SONG';
+    }
+}
+</script>
+</body>
+</html>
+
+
+    
+    

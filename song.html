@@ -1,0 +1,250 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Novel Collection</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+<body>
+
+    <div class="marquee-wrapper">
+        <div class="marquee-content">
+            <span>WELCOME TO MY ENTERTAINMENT PAGE 🎀</span>
+            <span class="outline-text">WELCOME TO MY ENTERTAINMENT PAGE</span>
+            <span>WELCOME TO MY ENTERTAINMENT PAGE 🎀</span>
+            <span class="outline-text">WELCOME TO MY ENTERTAINMENT PAGE</span>
+            <span>WELCOME TO MY ENTERTAINMENT PAGE 🎀</span>
+            <span class="outline-text">WELCOME TO MY ENTERTAINMENT PAGE</span>
+        </div>
+    </div>
+
+    <div class="nav-container">
+        <div class="title-novel">
+            <nav class="navigation-bar"> 
+                <a href="entertainment.html" class="back-link"><i class="fas fa-arrow-left"></i> </a>
+                <a href="novel.html" class="nav-button">novel collection</a>
+                <a href="sports.html" class="nav-button">sports</a>
+                <a href="movie.html" class="nav-button">fav show/ movie</a>
+                <a href="song.html" class="nav-button">fav song</a>
+            </nav>
+        </div>
+    </div>
+
+
+
+
+<div class="leisure-section">
+    <div class="leisure-box">
+        <p class="leisure-text">
+            During my leisure time,<br>
+            I like to ....
+        </p>
+        
+        <a href="#gallery-start" class="btn-view">Click to view</a>
+    </div>
+</div>
+
+
+
+</body>
+</html>
+
+
+
+
+
+    <style>
+}
+
+        /* 2. NAVIGATION BAR STYLE */
+        .nav-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        .title-novel {
+            width: fit-content;
+            background-color: #ffd1dc;
+            text-align: center;
+            padding: 15px 40px;
+            border-radius: 50px; /* Bentuk kapsul */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-button {
+            text-decoration: none;
+            color: #d81b60;
+            font-weight: bold;
+            padding: 10px 15px;
+            margin: 0 5px;
+            text-transform: uppercase;
+            font-size: 13px;
+            transition: 0.3s;
+        }
+
+        .nav-button:hover {
+            background: white;
+            border-radius: 20px;
+        }
+
+        .back-link {
+            text-decoration: none;
+            color: #d81b60;
+            margin-right: 15px;
+        }
+
+
+  body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to bottom, #ffeef5, #f6f7ff);
+        }
+
+	body {
+    	    background-image: url('pink3.jpg'); 
+            background-size: cover; 
+            background-repeat: no-repeat; 
+            background-attachment: fixed; 
+            background-position: center center;
+}
+
+        /* NAVBAR */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #FFD1DC ; 
+            padding: 14px 40px;
+            border-radius: 0 0 20px 20px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 40px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color:  #C20E4F ;
+            font-weight: 500;
+            font-size: 16px;
+
+}
+
+
+
+
+
+        /* CSS RESET & BASE */
+        body {
+            background-color: #fff5f7; /* Pink cair estetik */
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', sans-serif;
+            display: block; /* Tukar dari flex supaya tak berhimpit ke tengah */
+        }
+	
+body {
+    	    background-image: url('pink3.jpg'); 
+            background-size: cover; 
+            background-repeat: no-repeat; 
+            background-attachment: fixed; 
+            background-position: center center;
+}
+
+        /* 1. MARQUEE STYLE (PALING ATAS) */
+        .marquee-wrapper {
+            width: 100%;
+            background: linear-gradient(to right, #fce4ec, #ffffff, #fce4ec);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            padding: 15px 0;
+            overflow: hidden;
+            white-space: nowrap;
+            position: relative;
+        }
+
+        .marquee-content {
+            display: inline-block;
+            animation: scroll 20s linear infinite;
+        }
+
+        .marquee-content span {
+            font-size: 1.1rem;
+            font-weight: 800;
+            color: #d81b60;
+            text-transform: uppercase;
+            padding: 0 30px;
+            letter-spacing: 2px;
+        }
+
+        .outline-text {
+            color: transparent !important;
+            -webkit-text-stroke: 1px #d81b60;
+            opacity: 0.5;
+        }
+
+        @keyframes scroll {
+            from { transform: translateX(0); }
+            to { transform: translateX(-50%); }
+        }
+
+        .marquee-wrapper:hover .marquee-content {
+            animation-play-state: paused;
+        }
+
+       /* Container Utama untuk Leisure Section */
+.leisure-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+/* Kotak Besar ber-radius (Ikut lukisan awak) */
+.leisure-box {
+    width: 80%;
+    max-width: 800px;
+    background: rgba(255, 255, 255, 0.4); /* Putih transparan sikit */
+    border: 3px solid #d81b60;           /* Border tebal warna pink */
+    border-radius: 40px;                 /* Radius melengkung tajam */
+    padding: 60px 40px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(216, 27, 96, 0.1);
+}
+
+/* Tulisan Leisure Time */
+.leisure-text {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #444;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Button Click to View (Bentuk Bujur) */
+.btn-view {
+    display: inline-block;
+    text-decoration: none;
+    color: #d81b60;
+    border: 2px solid #d81b60;
+    padding: 10px 35px;
+    border-radius: 50px;       /* Paksa jadi bujur sempurna */
+    font-weight: bold;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background: white;
+}
+
+/* Effect bila kursor lalu kat button */
+.btn-view:hover {
+    background: #d81b60;
+    color: white;
+    transform: scale(1.1);
+}
+
+        </style>
+</head>

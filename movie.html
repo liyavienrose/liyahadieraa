@@ -1,0 +1,232 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>My Fav Show/ Movie</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+<body>
+
+    <div class="marquee-wrapper">
+        <div class="marquee-content">
+            <span>WELCOME TO MY ENTERTAINMENT PAGE 🎀</span>
+            <span class="outline-text">WELCOME TO MY ENTERTAINMENT PAGE</span>
+            <span>WELCOME TO MY ENTERTAINMENT PAGE 🎀</span>
+            <span class="outline-text">WELCOME TO MY ENTERTAINMENT PAGE</span>
+            <span>WELCOME TO MY ENTERTAINMENT PAGE 🎀</span>
+            <span class="outline-text">WELCOME TO MY ENTERTAINMENT PAGE</span>
+        </div>
+    </div>
+
+    <div class="nav-container">
+        <div class="title-novel">
+            <nav class="navigation-bar"> 
+                <a href="entertainment.html" class="back-link"><i class="fas fa-arrow-left"></i> </a>
+                <a href="novel.html" class="nav-button">novel collection</a>
+                <a href="sports.html" class="nav-button">sports</a>
+                <a href="movie.html" class="nav-button">fav show/ movie</a>
+                <a href="song.html" class="nav-button">fav song</a>
+            </nav>
+        </div>
+    </div>
+
+    <div class="audio-player">
+        <audio controls autoplay loop>
+            <source src="audio.m4a" type="audio/mpeg">
+            Browser anda tidak menyokong audio.
+        </audio>
+    </div>
+
+    <div class="container">
+                <div class="grid-layout">
+            <div class="card"><img src="images/img1.jpg"></div>
+            <div class="card"><img src="images/img2.jpg"></div>
+            <div class="card"><img src="images/img3.jpg"></div>
+            <div class="card"><img src="images/img4.jpg"></div>
+            <div class="card"><img src="images/img5.jpg"></div>
+            <div class="card"><img src="images/img6.jpg"></div>
+            <div class="card"><img src="images/img7.jpg"></div>
+            <div class="card"><img src="images/img8.jpg"></div>
+            <div class="card"><img src="images/img9.jpg"></div>
+            <div class="card"><img src="images/img10.jpg"></div>
+            <div class="card"><img src="images/img11.jpg"></div>
+            <div class="card"><img src="images/img12.jpg"></div>
+        </div>
+
+       
+        <div class="grid-layout">
+            <div class="card">
+                <video controls>
+                    <source src="videos/video1.mp4" type="video/mp4">
+                </video>
+                <div class="overlay">Video 1</div>
+            </div>
+            <div class="card">
+                <video controls>
+                    <source src="videos/video2.mp4" type="video/mp4">
+                </video>
+                <div class="overlay">Video 2</div>
+            </div>
+            <div class="card">
+                <video controls>
+                    <source src="videos/video3.mp4" type="video/mp4">
+                </video>
+                <div class="overlay">Video 3</div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+    <style>
+        /* CSS RESET & BASE */
+        body {
+            background-color: #fff5f7; /* Pink cair estetik */
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', sans-serif;
+            display: block; /* Tukar dari flex supaya tak berhimpit ke tengah */
+        }
+	
+body {
+    	    background-image: url('pink3.jpg'); 
+            background-size: cover; 
+            background-repeat: no-repeat; 
+            background-attachment: fixed; 
+            background-position: center center;
+}
+
+        /* 1. MARQUEE STYLE (PALING ATAS) */
+        .marquee-wrapper {
+            width: 100%;
+            background: linear-gradient(to right, #fce4ec, #ffffff, #fce4ec);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            padding: 15px 0;
+            overflow: hidden;
+            white-space: nowrap;
+            position: relative;
+        }
+
+        .marquee-content {
+            display: inline-block;
+            animation: scroll 20s linear infinite;
+        }
+
+        .marquee-content span {
+            font-size: 1.1rem;
+            font-weight: 800;
+            color: #d81b60;
+            text-transform: uppercase;
+            padding: 0 30px;
+            letter-spacing: 2px;
+        }
+
+        .outline-text {
+            color: transparent !important;
+            -webkit-text-stroke: 1px #d81b60;
+            opacity: 0.5;
+        }
+
+        @keyframes scroll {
+            from { transform: translateX(0); }
+            to { transform: translateX(-50%); }
+        }
+
+        .marquee-wrapper:hover .marquee-content {
+            animation-play-state: paused;
+        }
+
+        /* 2. NAVIGATION BAR STYLE */
+        .nav-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        .title-novel {
+            width: fit-content;
+            background-color: #ffd1dc;
+            text-align: center;
+            padding: 15px 40px;
+            border-radius: 50px; /* Bentuk kapsul */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-button {
+            text-decoration: none;
+            color: #d81b60;
+            font-weight: bold;
+            padding: 10px 15px;
+            margin: 0 5px;
+            text-transform: uppercase;
+            font-size: 13px;
+            transition: 0.3s;
+        }
+
+        .nav-button:hover {
+            background: white;
+            border-radius: 20px;
+        }
+
+        .back-link {
+            text-decoration: none;
+            color: #d81b60;
+            margin-right: 15px;
+        }
+
+        /* 3. AUDIO PLAYER */
+        .audio-player {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        /* 4. GRID LAYOUT */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .grid-layout {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        /* 5. CARD STYLE (IMAGE & VIDEO) */
+        .card {
+            aspect-ratio: 1 / 1;
+            border-radius: 25px;
+            overflow: hidden;
+            background: linear-gradient(45deg, #ffe8a3, #ffb4e6);
+            position: relative;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        .card:hover {
+            transform: scale(1.05) translateY(-5px);
+            box-shadow: 0 10px 25px rgba(255, 180, 230, 0.4);
+        }
+
+        .card img, .card video {
+
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        
+        }
+
+        </style>
+</head>

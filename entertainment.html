@@ -1,0 +1,243 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>My Interest Page</title>
+       
+
+<style>
+
+.entertainment{
+    background-image: url('bgg.jpg');   
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    min-height: 100vh;
+    margin: 0;
+
+}
+
+        
+        .nav-container {
+            display: flex;
+            justify-content: center;
+	    align-items: center;
+	    margin-top: 20px;
+    	    margin-bottom: 30px;
+ 	    width: 100%;
+	    gap:15px;;
+        }
+
+        .title-bar {
+            width: fit-content;
+            background-color: #FFF1F4  ;
+            text-align: center;
+            padding: 15px 40px;
+            border-radius: 50px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-button {
+            text-decoration: none;
+            color: #d81b60;
+            font-weight: bold;
+            padding: 10px 15px;
+            margin: 0 5px;
+            text-transform: uppercase;
+            font-size: 13px;
+            transition: 0.3s;
+        }
+
+        .nav-button:hover {
+            background: white;
+            border-radius: 20px;
+        }
+
+        
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #FFD1DC ; 
+            padding: 14px 40px;
+            border-radius: 0 0 20px 20px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 40px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color:  #C20E4F ;
+            font-weight: 500;
+            font-size: 16px;
+
+}
+
+        
+        .marquee-wrapper {
+            width: 100%;
+            background: linear-gradient(to right, #fce4ec, #ffffff, #fce4ec);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            padding: 15px 0;
+            overflow: hidden;
+            white-space: nowrap;
+            position: relative;
+	    margin-bottom:20px;
+        }
+
+        .marquee-content {
+            display: inline-block;
+            animation: scroll 20s linear infinite;
+        }
+
+        .marquee-content span {
+            font-size: 1.1rem;
+            font-weight: 800;
+            color: #d81b60;
+            text-transform: uppercase;
+            padding: 0 30px;
+            letter-spacing: 2px;
+        }
+
+        .outline-text {
+            color: transparent;
+            -webkit-text-stroke: 1px #d81b60;
+            opacity: 0.5;
+        }
+
+        @keyframes scroll {
+            from { transform: translateX(0); }
+            to { transform: translateX(-50%); }
+        }
+
+        .marquee-wrapper:hover .marquee-content {
+            animation-play-state: paused;
+        }
+
+      
+
+.leisure-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+.leisure-box {
+    width: 80%;
+    max-width: 800px;
+    background: rgba(255, 255, 255, 0.4);
+    border: 3px solid #d81b60;          
+    border-radius: 40px;                 
+    padding: 60px 40px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(216, 27, 96, 0.1);
+}
+
+.leisure-text {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #444;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    font-family: 'Inter', sans-serif;
+}
+
+.btn-view {
+    display: inline-block;
+    text-decoration: none;
+    color: #d81b60;
+    border: 2px solid #d81b60;
+    padding: 10px 35px;
+    border-radius: 50px;       
+    font-weight: bold;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background: white;
+}
+
+
+.btn-view:hover {
+    background: #d81b60;
+    color: white;
+    transform: scale(1.1);
+}
+
+.footer {
+    font-family: Arial, sans-serif;
+    color:#450C21;
+    margin-top:30px;
+    margin-bottom:30px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    padding: 10px;
+    background-color:#F7CAC9; 
+    border-top: 5px solid var(--pink-accent);
+    width:98%;
+}
+
+
+        </style>
+</head>
+
+
+<body class="entertainment">
+    </body>
+
+    <div class="marquee-wrapper">
+        <div class="marquee-content">
+            <span>WELCOME TO MY INTERESTS PAGE &#127872</span>
+            <span class="outline-text">WELCOME TO MY INTERESTS PAGE</span>
+            <span>WELCOME TO MY INTERESTS PAGE &#127872</span>
+            <span class="outline-text">WELCOME TO MY INTERESTS PAGE</span>
+            <span>WELCOME TO MY INTERESTS PAGE &#127872</span>
+            <span class="outline-text">WELCOME TO MY  INTERESTS PAGE</span>
+        </div>
+    </div>
+
+    <div class="nav-container">
+        <div class="title-bar">
+            <nav class="navigation-bar"> 
+                <a href="entertainment.html" class="back-link"><i class="fas fa-arrow-left"></i> </a>
+                <a href="index.html" class="nav-button">Home</a>
+                <a href="biodata.html" class="nav-button">Biodata</a>
+                <a href="experience.html" class="nav-button">Experience</a>
+                <a href="education.html" class="nav-button">Education</a>
+	        <a href="entertainment.html" class="nav-button">Interests</a>
+                <a href="gallery.html" class="nav-button">Gallery</a>
+
+            </nav>
+        </div>
+    </div>
+
+
+
+
+<div class="leisure-section">
+    <div class="leisure-box">
+        <p class="leisure-text">
+            During my leisure time, I enjoy quiet moments reading novels while listening to music. I also spend my time watching sports, movies, and dramas, 		which help me relax, refresh my mind, and enjoy my free time.
+        </p>
+        
+        <a href="collection.html" class="btn-view">Click to view</a>
+    </div>
+</div>
+
+<div class="footer">
+  &copy; 2025 Liya Hadiera Binti Syaful Azam. All rights reserved.
+</div>
+
+
+</body>
+</html>
+
+
+
